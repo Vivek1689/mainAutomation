@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite Chrome" data-provider-thread-count="2">
+    <parameter name="browserName" value="edge" />
+    <listeners>
+        <listener class-name="listeners.AnnotationTransformer"/>
+    </listeners>
+    <test verbose="2" name="RAFT-Web Test">
+        <classes>
+            <class name="runner.TestRunner"/>
+        </classes>
+    </test>
+</suite>

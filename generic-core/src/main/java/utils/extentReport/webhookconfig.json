@@ -1,0 +1,38 @@
+{
+  "reports": [
+    {
+      "targets": [
+        {
+          "name": "teams",
+          "inputs": {
+            "url": "<webhook-url>",
+            "publish": "failure-details",
+            "title": "Android Automation",
+            "title_suffix": "Results - {BUILD_USER}"
+          },
+          "extensions": [
+            {
+              "name": "hyperlinks",
+              "inputs": {
+                "links": [
+                  {
+                    "text": "Pipeline",
+                    "url": "<jenkins-path-to-extent-report>/extent-reports/extent-report-{BUILD_NUMBER}.html"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "type": "testng",
+          "files": [
+            "/target/surefire-reports/testng-results.xml"
+          ]
+        }
+      ]
+    }
+  ]
+}
