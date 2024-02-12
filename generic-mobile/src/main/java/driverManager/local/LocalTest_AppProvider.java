@@ -35,6 +35,7 @@ public class LocalTest_AppProvider implements WebDriverProvider {
 
             // Required
             //options.setUdid("emulator-5554"); // Required to direct to particular device Only if multiple devices are connected
+            //options.setPlatformVersion("");//Optional
             options.setApp(appPath);
             try {
                 return new AndroidDriver(getConfig().appiumLocalURL(), options);

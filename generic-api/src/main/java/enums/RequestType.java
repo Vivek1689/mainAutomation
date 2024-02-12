@@ -1,6 +1,9 @@
 package enums;
 
 
+import lombok.Getter;
+
+@Getter
 public enum RequestType {
     GET("GET"),
     POST("POST"),
@@ -9,13 +12,10 @@ public enum RequestType {
     PATCH("PATCH"),
     OPTIONS("OPTIONS");
 
-    String requestType;
+    final String requestType;
 
     RequestType(String s) {
         this.requestType = s;
     }
 
-    public String getRequestType() {
-        return this.requestType;
-    }
 }
